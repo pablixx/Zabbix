@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2022-01-27T12:41:19Z'
+  date: '2022-01-27T13:10:58Z'
   groups:
     -
       uuid: 36bff6c29af64692839d077febfc7079
@@ -27,6 +27,26 @@ zabbix_export:
           trends: '0'
           units: '%'
           description: 'The CPU utilization in percent(%).'
+        -
+          uuid: 37dfc77898d74d7aa6f15bbf261766f2
+          name: 'Firmware Version (backup)'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.11.2.14.11.5.1.59.1.3.1.4.2
+          key: firmware.version.backup
+          delay: 1h
+          trends: '0'
+          value_type: TEXT
+          inventory_link: SOFTWARE_APP_B
+        -
+          uuid: 978bb6d27c774ac98257b73d09e57475
+          name: 'Firmware Version (main)'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.11.2.14.11.5.1.59.1.3.1.4.1
+          key: firmware.version.main
+          delay: 1h
+          trends: '0'
+          value_type: TEXT
+          inventory_link: SOFTWARE_APP_A
         -
           uuid: 795baa8b3994419f9cc41553c0390fc2
           name: 'MAC Addresses learnt'
