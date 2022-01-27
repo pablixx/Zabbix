@@ -1,6 +1,6 @@
 zabbix_export:
   version: '5.4'
-  date: '2022-01-27T12:30:15Z'
+  date: '2022-01-27T12:41:19Z'
   groups:
     -
       uuid: 36bff6c29af64692839d077febfc7079
@@ -11,6 +11,9 @@ zabbix_export:
       template: 'Aruba 2540'
       name: 'Aruba 2540'
       description: 'Aruba 2540 24G PoE+ 4SFP+ Switch'
+      templates:
+        -
+          name: 'Interfaces SNMP'
       groups:
         -
           name: 'Templates/Network devices'
