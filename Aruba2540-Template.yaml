@@ -1,0 +1,35 @@
+zabbix_export:
+  version: '5.4'
+  date: '2022-01-27T12:30:15Z'
+  groups:
+    -
+      uuid: 36bff6c29af64692839d077febfc7079
+      name: 'Templates/Network devices'
+  templates:
+    -
+      uuid: 82698f4450de405fb3d774ae45dbce56
+      template: 'Aruba 2540'
+      name: 'Aruba 2540'
+      description: 'Aruba 2540 24G PoE+ 4SFP+ Switch'
+      groups:
+        -
+          name: 'Templates/Network devices'
+      items:
+        -
+          uuid: 68d1546f8b3043b28b990cabd2253249
+          name: 'CPU Ulitization (%)'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.11.2.14.11.5.1.9.6.1.0
+          key: cpu.utilization
+          trends: '0'
+          units: '%'
+          description: 'The CPU utilization in percent(%).'
+        -
+          uuid: 795baa8b3994419f9cc41553c0390fc2
+          name: 'MAC Addresses learnt'
+          type: SNMP_AGENT
+          snmp_oid: 1.3.6.1.4.1.11.2.14.11.5.1.9.12.1.0
+          key: mac.learnt.count
+          delay: 10m
+          trends: '0'
+          description: 'Keep a counter for the total number of MAC Addresses currently learnt on the box.'
