@@ -3,11 +3,11 @@ zabbix_export:
   date: '2024-05-05T00:00:00Z'
   groups:
     -
-      uuid: 3687ddca-7394-4f90-9a18-3e9613e508ec
+      uuid: 3687ddca73944f909a183e9613e508ec
       name: 'Templates/Network devices'
   templates:
     -
-      uuid: 0fe5cea4-18dd-4a13-9dcd-aa1ddc95332a
+      uuid: 0fe5cea418dd4a139dcdaa1ddc95332a
       template: 'WatchGuard M370 BOVPN'
       name: 'WatchGuard M370 BOVPN'
       description: 'Monitor BOVPN tunnels on WatchGuard M370 via SNMP.'
@@ -16,7 +16,7 @@ zabbix_export:
           name: 'Templates/Network devices'
       discovery_rules:
         -
-          uuid: 3e502108-587f-4ffb-96d8-8978833f6075
+          uuid: 3e502108587f4ffb96d88978833f6075
           name: 'BOVPN tunnel discovery'
           type: SNMP_AGENT
           snmp_oid: 'discovery[{#TUNNAME},1.3.6.1.4.1.3097.1.3.2.1.2,{#LOCALGATEWAY},1.3.6.1.4.1.3097.1.3.2.1.3,{#REMOTEGATEWAY},1.3.6.1.4.1.3097.1.3.2.1.4]'
@@ -25,7 +25,7 @@ zabbix_export:
           description: 'Discover BOVPN tunnels.'
           item_prototypes:
             -
-              uuid: 2975302a-0802-427c-9ec9-c0f715e4b8ff
+              uuid: 2975302a0802427c9ec9c0f715e4b8ff
               name: 'BOVPN {#TUNNAME}: Status'
               type: SNMP_AGENT
               snmp_oid: '1.3.6.1.4.1.3097.1.3.2.1.5.{#SNMPINDEX}'
@@ -33,7 +33,7 @@ zabbix_export:
               value_type: UNSIGNED
               description: 'Operational status of BOVPN tunnel.'
             -
-              uuid: 11013cb9-0af8-4b04-af92-a01d60032844
+              uuid: 11013cb90af84b04af92a01d60032844
               name: 'BOVPN {#TUNNAME}: Inbound Bytes'
               type: SNMP_AGENT
               snmp_oid: '1.3.6.1.4.1.3097.1.3.2.1.6.{#SNMPINDEX}'
@@ -41,7 +41,7 @@ zabbix_export:
               units: B
               description: 'Bytes received over BOVPN tunnel.'
             -
-              uuid: b9c9c0d9-7b8e-4c36-9d69-d474a5a01cce
+              uuid: b9c9c0d97b8e4c369d69d474a5a01cce
               name: 'BOVPN {#TUNNAME}: Outbound Bytes'
               type: SNMP_AGENT
               snmp_oid: '1.3.6.1.4.1.3097.1.3.2.1.7.{#SNMPINDEX}'
@@ -49,7 +49,7 @@ zabbix_export:
               units: B
               description: 'Bytes sent over BOVPN tunnel.'
             -
-              uuid: a7d5a0e8-34c1-4e85-9021-0eef35b9147b
+              uuid: a7d5a0e834c14e8590210eef35b9147b
               name: 'BOVPN {#TUNNAME}: Local gateway'
               type: SNMP_AGENT
               snmp_oid: '1.3.6.1.4.1.3097.1.3.2.1.3.{#SNMPINDEX}'
@@ -57,7 +57,7 @@ zabbix_export:
               value_type: TEXT
               description: 'Local gateway IP address.'
             -
-              uuid: 2b0d7330-56ab-42e1-8e2f-d9f59fd6f23a
+              uuid: 2b0d733056ab42e18e2fd9f59fd6f23a
               name: 'BOVPN {#TUNNAME}: Remote gateway'
               type: SNMP_AGENT
               snmp_oid: '1.3.6.1.4.1.3097.1.3.2.1.4.{#SNMPINDEX}'
